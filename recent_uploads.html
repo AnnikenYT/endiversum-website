@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Generic - Endiversum</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="index" class="logo">
+					<span class="symbol"><img src="images/endiversum-logo.svg" alt="" /></span><span
+						class="title">Endiversum</span>
+				</a>
+
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index">Home</a></li>
+				<li><a href="werke.html">Werke</a></li>
+				<!-- 							<li><a href="werke.html#scotty-vs-doenni">Scoty VS Dönni</a></li>
+							<li><a href="werke.html#force">Force</a></li>
+							<li><a href="werke.html#trailer">Trailer</a></li> -->
+				<li><a href="https://endiversum.fandom.com/de/wiki/Endiversum_Wiki">Wiki</a></li>
+				<li><a href="team.html">Team</a></li>				<li><a href="index">Home</a></li>
+				<li><a href="werke.html">Werke</a></li>
+				<!-- 							<li><a href="werke.html#scotty-vs-doenni">Scoty VS Dönni</a></li>
+							<li><a href="werke.html#force">Force</a></li>
+							<li><a href="werke.html#trailer">Trailer</a></li> -->
+				<li><a href="https://endiversum.fandom.com/de/wiki/Endiversum_Wiki">Wiki</a></li>
+				<li><a href="team.html">Team</a></li>
+				<li><a href="recent_uploads.html">Recent Uploads</a></li>
+
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<center>
+			<p>
+				Hier könnt ihr die letzten 3 Uploads direkt auf der Webseite ansehen.
+			</p>
+			<p>
+				<iframe class="latestVideoEmbed" vnum='0' cid="UC2SRnvFaCNqqKxa_Pkhu2cw" width="600" height="340"
+					frameborder="0" allowfullscreen></iframe>
+			</p>
+			<p>
+				<iframe class="latestVideoEmbed" vnum='1' cid="UC2SRnvFaCNqqKxa_Pkhu2cw" width="600" height="340"
+					frameborder="0" allowfullscreen></iframe>
+			</p>
+			<p>
+				<iframe class="latestVideoEmbed" vnum='2' cid="UC2SRnvFaCNqqKxa_Pkhu2cw" width="600" height="340"
+					frameborder="0" allowfullscreen></iframe>
+			</p>
+		</center>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+			function loadVideo(iframe) {
+				$.getJSON(reqURL + iframe.getAttribute('cid'),
+					function (data) {
+						var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+						console.log(videoNumber);
+						var link = data.items[videoNumber].link;
+						id = link.substr(link.indexOf("=") + 1);
+						iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
+						var title = data.items[videoNumber].title;
+						console.log(title);
+					}
+				);
+			}
+			var iframes = document.getElementsByClassName('latestVideoEmbed');
+			for (var i = 0, len = iframes.length; i < len; i++) {
+				loadVideo(iframes[i]);
+			}
+		</script>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<!-- 							<section>
+							<h2>Get in touch</h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send" class="primary" /></li>
+								</ul>
+							</form>
+						</section> -->
+				<section>
+					<h2>Quick Links</h2>
+					<ul class="icons">
+						<li><a href="https://www.twitter.com/Endiversum" class="icon brands style2 fa-twitter"><span
+									class="label">Twitter</span></a></li>
+						<li><a href="https://www.youtube.com/Endiversum" class="icon brands style2 fa-youtube"><span
+									class="label">YouTube</span></a></li>
+						<li><a href="https://www.instagram.com/endiversum/"
+								class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+						<!-- 								<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li> -->
+						<li><a href="mailto:info@endiversum.com" class="icon solid style2 fa-envelope"><span
+									class="label">Email</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Endiversum. All rights reserved</li>
+					<li>Design: <a href="https://twitch.tv/annikenyt">AnnikenYT</a></li>
+					<li>This is a heavily modified version of a template by <a href="http://html5up.net">HTML5 UP</a>
+						<3 </li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
