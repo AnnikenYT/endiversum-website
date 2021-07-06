@@ -183,3 +183,14 @@
 			});
 
 })(jQuery);
+
+$(".popup").click(function () {
+    var $this = $(this);
+    var $iframe = $("<iframe>").attr("src", $this.data("link")).css({"width": 600, "height": 300});
+    var $title = $("<h1>").text($this.data("title"));
+    $("#video-view").html($title).append($iframe);
+    $iframe.wrap("<div class='class-video'>");
+	$('html,body').animate({
+        scrollTop: $("#video-view").offset().top},
+        'slow');
+});

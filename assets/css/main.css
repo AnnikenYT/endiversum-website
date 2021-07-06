@@ -3383,3 +3383,21 @@ input, select, textarea {
 			}
 
 		}
+
+.text {
+	color: rgb(255, 255, 255); 
+	/* margin-left: 69%; */ /* right, btw: nice */
+	margin-left: 10%; /* left */
+	padding: 15px;
+	background-color: rgba(50, 50, 50, 0.5);
+	width: fit-content;
+	border-radius: 5px 5px 0px 0px;
+}
+.text h3, h1 {
+	margin-bottom: 10px;
+}
+
+#video-view {
+	margin-left: 10%;
+}
+
