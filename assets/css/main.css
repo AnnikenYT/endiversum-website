@@ -2588,6 +2588,13 @@ input, select, textarea {
 			color: #ffffff !important;
 		}
 
+		
+		.button.primaryccp {
+			box-shadow: none;
+			background-color: #250b53;
+			color: #ffffff !important;
+		}
+
 			input[type="submit"].primary:hover,
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
@@ -2760,6 +2767,10 @@ input, select, textarea {
 					.tiles article > a .content > :last-child {
 						margin-bottom: 0;
 					}
+
+			.tiles article.cp > .image:before {
+			background-color: #250b53;
+			}
 
 			.tiles article.endiversum > .image:before {
 				background-color: #a257e0;
