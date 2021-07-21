@@ -70,6 +70,22 @@ section, summary, time, mark, audio, video {
 	scroll-behavior: smooth;
 }
 
+.split {
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+  }
+  
+  .left {
+	left: 0;
+  }
+  
+  .right {
+	right: 0;
+  }
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
