@@ -239,6 +239,55 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	.bigtitle {
+		font-size: 5.75em;
+		font-weight: 700;
+		line-height: 1.3;
+		margin: 0 0 0.2em 0;
+		letter-spacing: -0.035em;
+		text-align: center;
+	}
+
+		.bigtitle a {
+			color: inherit;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.bigtitle {
+				font-size: 4em;
+				margin: 0 0 1em 0;
+			}
+
+		}
+
+		@media screen and (max-width: 360px) {
+
+			.bigtitle {
+				font-size: 2.75em;
+			}
+
+		}
+
+		.bigtitlesub {
+			font-weight: 900;
+			line-height: 1.5;
+			margin: 0 0 2em 0;
+			text-transform: uppercase;
+			letter-spacing: 0.35em;
+			text-align: center;
+		}
+	
+			.bigtitlesub a{
+				color: inherit;
+			}
+	
+		.bigtitlesub {
+			font-size: 1.1em;
+		}
+	
+
+
 	h1 {
 		font-size: 2.75em;
 		font-weight: 700;
