@@ -2742,7 +2742,7 @@ input, select, textarea {
 				position: relative;
 				display: block;
 				width: 100%;
-				border-radius: 15px;
+				border-radius: 25px;
 				overflow: hidden;
 				border: solid 5px transparent;
 				animation: geklaut2 0.5s linear;
@@ -2895,13 +2895,13 @@ input, select, textarea {
 			}
 
 			@keyframes geklaut {
-				0% {border: solid 5px rgba(255, 255, 255, 0);}
-				100% {border: solid 5px #fff;}
+				0% {border: solid 5px rgba(255, 255, 255, 0); border-radius: 25px;}
+				100% {border: solid 5px #fff; border-radius: 35px;}
 			  }
 			
 			@keyframes geklaut2 {
-				0% {border: solid 5px #fff;}
-				100% {border: solid 5px rgba(255, 255, 255, 0);}
+				0% {border: solid 5px #fff; border-radius: 35px;}
+				100% {border: solid 5px rgba(255, 255, 255, 0); border-radius: 25px;}
 			  }
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
@@ -3003,11 +3003,13 @@ input, select, textarea {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  display: bg;
 }
 
 /* Hide the images by default */
 .slideitem {
-  display: none;
+  display: full;
+  border-radius: 50px;
 }
 
 /* Next & previous buttons */
