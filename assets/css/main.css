@@ -237,6 +237,7 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		text-shadow: #080808 0px 0px 2px;
 	}
 
 	.bigtitle {
