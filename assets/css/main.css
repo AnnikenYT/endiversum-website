@@ -3007,10 +3007,92 @@ input, select, textarea {
 }
 
 /* Hide the images by default */
+
 .slideitem {
-  display: full;
-  border-radius: 50px;
+	transform: scale(1.35);
+	-moz-transition: -moz-transform 0.5s ease;
+	-webkit-transition: -webkit-transform 0.5s ease;
+	-ms-transition: -ms-transform 0.5s ease;
+	border: solid 5px transparent; border-radius: 65px;
+	display: full;
+	animation: geklautb2 0.5s linear;
+	animation-fill-mode: forwards; 
+  }
+  
+  .slideitem:before {
+	  transform: scale(1.35);
+	  -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+	  -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+	  -ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .slideitem:after {
+	  -moz-transition: opacity 0.5s ease;
+	  -webkit-transition: opacity 0.5s ease;
+	  -ms-transition: opacity 0.5s ease;
+  }
+  
+  .slideitem:hover {
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+	animation: geklautb 0.5s linear;
+	animation-fill-mode: forwards; 
+  }
+
+  /*Smaller*/
+
+@media screen and (max-width: 1300px) {
+	.slideitem {
+	  transform: scale(0.9);
+	  -moz-transition: -moz-transform 0.5s ease;
+	  -webkit-transition: -webkit-transform 0.5s ease;
+	  -ms-transition: -ms-transform 0.5s ease;
+	  border: solid 5px transparent; border-radius: 65px;
+	  display: full;
+	  animation: geklautb2 0.5s linear;
+	  animation-fill-mode: forwards; 
+	}
+
+	.slideitem:before {
+		transform: scale(0.9);
+		-moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+		-webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+		-ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+	}
+
+	.slideitem:after {
+		-moz-transition: opacity 0.5s ease;
+		-webkit-transition: opacity 0.5s ease;
+		-ms-transition: opacity 0.5s ease;
+	}
+
+	.slideitem:hover {
+	  -moz-transform: scale(1.0);
+	  -webkit-transform: scale(1.0);
+	  -ms-transform: scale(1.0);
+	  transform: scale(1.0);
+	  animation: geklautb 0.5s linear;
+	  animation-fill-mode: forwards; 
+	}
 }
+
+@keyframes geklautb {
+	0% {border: solid 5px rgba(255, 255, 255, 0); border-radius: 50px;}
+	100% {border: solid 5px #fff; border-radius: 65px;}
+  }
+
+@keyframes geklautb2 {
+	0% {border: solid 5px #fff; border-radius: 65px;}
+	100% {border: solid 5px rgba(255, 255, 255, 0); border-radius: 50px;}
+  }
+
+
+
+  
+
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -3106,7 +3188,7 @@ input, select, textarea {
 			color: inherit;
 			font-weight: 900;
 			letter-spacing: 0.35em;
-			margin: 0 0 2.5em 0;
+			margin: 0 0 4.5em 0;
 			text-decoration: none;
 			text-transform: uppercase;
 			display: inline-block;
