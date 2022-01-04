@@ -416,6 +416,7 @@ hr.major {
 
 .align-center {
 	text-align: center;
+	float: middle;
 }
 
 .align-right {
@@ -3301,3 +3302,5 @@ body.is-menu-visible #menu .close {
 #video-view {
 	margin-left: 10%;
 }
+
+
