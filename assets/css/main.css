@@ -2303,15 +2303,23 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	-moz-flex-wrap: nowrap;
-	-webkit-flex-wrap: nowrap;
-	-ms-flex-wrap: nowrap;
-	flex-wrap: nowrap;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	position: relative;
 	margin: -2.5em 0 0 -2.5em;
+
+
+}
+
+.tiles-row {
+	-moz-flex-wrap: nowrap !important;
+	-webkit-flex-wrap: nowrap !important;
+	-ms-flex-wrap: nowrap !important;
+	flex-wrap: nowrap !important;
 	overflow-x: scroll;
 	overflow-y: hidden;
-
 }
 
 .tiles article {
@@ -2375,7 +2383,6 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -2485,10 +2492,12 @@ body:not(.is-touch) .tiles article:hover>.image {
 
 @keyframes geklaut {
 	0% {
+		filter: brightness(100%);
 		border: solid 5px rgba(255, 255, 255, 0);
 		border-radius: 25px;
 	}
 	100% {
+		filter: brightness(40%);
 		border: solid 5px #fff;
 		border-radius: 35px;
 	}
@@ -2496,10 +2505,12 @@ body:not(.is-touch) .tiles article:hover>.image {
 
 @keyframes geklaut2 {
 	0% {
+		filter: brightness(40%);
 		border: solid 5px #fff;
 		border-radius: 35px;
 	}
 	100% {
+		filter: brightness(100%);
 		border: solid 5px rgba(255, 255, 255, 0);
 		border-radius: 25px;
 	}
