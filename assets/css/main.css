@@ -1,6 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
 /*
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -308,7 +309,6 @@ h1 a {
 h2, h3, h4, h5, h6 {
 	font-weight: 900;
 	line-height: 1.5;
-	margin: 0em 0 2em 0;
 	text-transform: uppercase;
 	letter-spacing: 0.35em;
 }
@@ -2296,6 +2296,17 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	opacity: 0.25;
 }
 
+
+.sectionTitle {
+	margin-bottom: 2vw;
+	margin-top: 2vw;
+	text-align: center;
+}
+
+
+
+
+
 /* Tiles */
 
 .tiles {
@@ -2303,14 +2314,15 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	-moz-flex-wrap: wrap;
+	/* -moz-flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	flex-wrap: wrap; */
 	position: relative;
 	margin: -2.5em 0 0 -2.5em;
+	flex-shrink: 0 !important;
 
-
+	padding-bottom: 2vw;
 }
 
 .tiles-row {
@@ -2320,6 +2332,18 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	flex-wrap: nowrap !important;
 	overflow-x: scroll;
 	overflow-y: hidden;
+	border-radius: 25px;
+}
+
+.tiles .filmarticle {
+	-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+	-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+	transition: transform 0.5s ease, opacity 0.5s ease;
+	position: relative;
+	width: 300px;
+
+	flex-shrink: 0;
 }
 
 .tiles article {
@@ -2328,8 +2352,8 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 	transition: transform 0.5s ease, opacity 0.5s ease;
 	position: relative;
-	width: calc(33.33333% - 2.5em);
-	margin: 2.5em 0 0 2.5em;
+	width: 500px;
+	margin: 30px 0 0 30px;
 }
 
 .tiles article>.image {
@@ -2340,6 +2364,7 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	position: relative;
 	display: block;
 	width: 100%;
+	height: 100%;
 	border-radius: 25px;
 	overflow: hidden;
 	border: solid 5px transparent;
@@ -2447,6 +2472,15 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	line-height: 1.5;
 	margin-top: 0.35em;
 	opacity: 0;
+	font-size: 14px;
+}
+
+.content h1 {
+	font-size: 30px;
+}
+
+article a h1 {
+	font-size: 30px;
 }
 
 .tiles article>a .content> :last-child {
@@ -2599,12 +2633,14 @@ body.is-touch .tiles article .content {
 
 ::-webkit-scrollbar {
 	width: 15px;
+	
 }
 
 /* Track */
 
 ::-webkit-scrollbar-track {
 	background: #424242;
+	border-radius: 10px;
 }
 
 /* Handle */
@@ -2629,10 +2665,12 @@ body.is-touch .tiles article .content {
 /* Slideshow container */
 
 .top-slider {
+	margin: 0;
 	max-width: 1000px;
 	position: relative;
 	margin: auto;
 	display: bg;
+	background-position: center;
 }
 
 /* Hide the images by default */
@@ -2747,9 +2785,14 @@ body.is-touch .tiles article .content {
 	user-select: none;
 }
 
+.prev {
+	transform: translateX(-9vw);
+}
+
 /* Position the "next button" to the right */
 
 .next {
+	transform: translateX(9vw);
 	right: 0;
 	border-radius: 3px 0 0 3px;
 }
@@ -3307,7 +3350,7 @@ body.is-menu-visible #menu .close {
 	transform: translateY(15px);
 	/* left */
 	padding: 15px;
-	background-color: rgba(50, 50, 50, 0.5);
+	/*background-color: rgba(50, 50, 50, 0.5);*/
 	width: fit-content;
 	border-radius: 25px 25px 0px 0px;
 }
