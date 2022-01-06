@@ -2303,12 +2303,15 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	-moz-flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	-moz-flex-wrap: nowrap;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
 	position: relative;
 	margin: -2.5em 0 0 -2.5em;
+	overflow-x: scroll;
+	overflow-y: hidden;
+
 }
 
 .tiles article {
@@ -2634,6 +2637,7 @@ body.is-touch .tiles article .content {
 	animation: geklautb2 0.5s linear;
 	animation-fill-mode: forwards;
 	cursor: pointer;
+	z-index: -20;
 }
 
 .slideitem:before {
@@ -3288,6 +3292,8 @@ body.is-menu-visible #menu .close {
 	/* margin-left: 69%; */
 	/* right, btw: nice */
 	margin-left: 10%;
+	margin-bottom: 0 !important;
+	transform: translateY(15px);
 	/* left */
 	padding: 15px;
 	background-color: rgba(50, 50, 50, 0.5);
