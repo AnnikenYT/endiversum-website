@@ -2364,6 +2364,18 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	margin: 30px 0 0 30px;
 }
 
+.activeTile {
+	border-radius: 25px !important;
+	overflow: hidden !important;
+	border: solid 5px white !important;
+	transition: all 0.5s linear;
+	border: solid 5px #fff;
+	border-radius: 35px;
+	transform: scale(1.08);
+
+}
+
+
 .tiles article>.image {
 	-moz-transition: -moz-transform 0.5s ease;
 	-webkit-transition: -webkit-transform 0.5s ease;
@@ -2534,12 +2546,10 @@ body:not(.is-touch) .tiles article:hover>.image {
 
 @keyframes geklaut {
 	0% {
-		filter: brightness(100%);
 		border: solid 5px rgba(255, 255, 255, 0);
 		border-radius: 25px;
 	}
 	100% {
-		filter: brightness(40%);
 		border: solid 5px #fff;
 		border-radius: 35px;
 	}
@@ -2547,14 +2557,43 @@ body:not(.is-touch) .tiles article:hover>.image {
 
 @keyframes geklaut2 {
 	0% {
-		filter: brightness(40%);
 		border: solid 5px #fff;
 		border-radius: 35px;
 	}
 	100% {
-		filter: brightness(100%);
 		border: solid 5px rgba(255, 255, 255, 0);
 		border-radius: 25px;
+	}
+}
+
+
+
+.darkArt .image img {
+	animation: geklaut2Dark 0.5s linear;
+	animation-fill-mode: forwards;
+}
+
+
+.darkArt:hover .image img {
+	animation: geklautDark 0.5s linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes geklautDark {
+	0% {
+		filter: brightness(100%);
+	}
+	100% {
+		filter: brightness(40%);
+	}
+}
+
+@keyframes geklaut2Dark {
+	0% {
+		filter: brightness(40%);
+	}
+	100% {
+		filter: brightness(100%);
 	}
 }
 
@@ -2893,7 +2932,7 @@ body.is-touch .tiles article .content {
 /* Header */
 
 #header {
-	padding: 8em 0 0.1em 0;
+	padding: 1em 0 0.1em 0;
 }
 
 #header .logo {
@@ -2944,6 +2983,12 @@ body.is-touch .tiles article .content {
 	padding: 0;
 }
 
+nav ul li a {
+	border-radius: 15px !important;
+}
+
+
+
 #header nav ul li {
 	display: block;
 	padding: 0;
@@ -2962,6 +3007,10 @@ body.is-touch .tiles article .content {
 	font-weight: 900;
 	letter-spacing: 0.35em;
 	text-transform: uppercase;
+}
+
+nav {
+	border-radius: 25px 0 0 5px;
 }
 
 #header nav ul li a[href="#menu"] {
@@ -3427,4 +3476,50 @@ body.is-menu-visible #menu .close {
 	padding-bottom: 5px;
 	word-wrap: break-word;
 	transform: translateX(0.5vw)
+}
+
+
+
+
+
+
+
+.tiles-nav {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: visible;
+}
+
+.newNav {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.navArt {
+	
+}
+
+.navArt span img {
+	width: 10vw;
+}
+
+@media screen and (min-width: 1300px) {
+	.tiles-nav {
+		margin-top: 75px;
+	}
+}
+
+
+
+
+
+
+
+
+.centerEvery {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
