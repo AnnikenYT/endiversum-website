@@ -3522,6 +3522,7 @@ body.is-menu-visible #menu .close {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 
 
