@@ -10,6 +10,15 @@
 
 
 
+/*
+
+* {
+	font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}
+
+*/
+
+
 
 /* Dropdown Button */
 
@@ -3548,4 +3557,15 @@ body.is-menu-visible #menu .close {
 
 .klena {
 	transform: translateY(13%);
+}
+
+
+
+
+
+
+
+.charaktereH122 article a .content p {
+	hyphens: auto !important; 
+	text-align: justify !important;
 }
